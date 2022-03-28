@@ -17,7 +17,7 @@ python ./hatsune.py -i input_image_path -s
 python ./hatsune.py -i input_image_path -o output_image_path
 ```
 
-## Acknowledgments
+## Acknowledgment
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">this is so cool! <a href="https://t.co/rXs4qkJK0L">https://t.co/rXs4qkJK0L</a></p>&mdash; Matplotlib (@matplotlib) <a href="https://twitter.com/matplotlib/status/1508140441983762432?ref_src=twsrc%5Etfw">March 27, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
