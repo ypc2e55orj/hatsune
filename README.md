@@ -4,7 +4,10 @@
 
 [このツイート](https://twitter.com/95d2d3/status/1507072893477277696) とインターネットお友達に触発されました。
 
+<div><video controls src="https://user-images.githubusercontent.com/43885603/160516984-bab60709-2438-4b44-9a4a-0ba614207949.mp4"></video></div>
+
 ## Usage
+
 [Pipenv](https://github.com/pypa/pipenv) が必要です。
 
 ```sh
