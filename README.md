@@ -2,6 +2,8 @@
 
 初音ミクの色成分をmatplotlibで可視化します。
 
+もちろん、初音ミク以外の画像にも使用することが可能です。
+
 [このツイート](https://twitter.com/95d2d3/status/1507072893477277696) とインターネットお友達に触発されました。
 
 <div><video controls src="https://user-images.githubusercontent.com/43885603/160516984-bab60709-2438-4b44-9a4a-0ba614207949.mp4"></video></div>
@@ -21,6 +23,8 @@ python ./hatsune.py -i input_image_path
 # 画像として保存します。
 python ./hatsune.py -i input_image_path -o output_image_path
 ```
+
+入力する画像ファイルはアルファチャンネル付きpngが望ましいです。また、使用されている色が多いとmatplotlibのビューワの動作が重くなります。
 
 ## Acknowledgment
 
