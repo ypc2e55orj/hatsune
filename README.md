@@ -10,8 +10,10 @@
 ```sh
 pipenv install
 
+pipenv shell
+
 # matplotlibのビューワが起動します。
-python ./hatsune.py -i input_image_path -s
+python ./hatsune.py -i input_image_path
 
 # 画像として保存します。
 python ./hatsune.py -i input_image_path -o output_image_path
