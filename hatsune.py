@@ -12,9 +12,7 @@ from mpl_toolkits.mplot3d import Axes3D
 def parse_arguments():
     parser = argparse.ArgumentParser('\'hatsune\' image color component (scatter plot) visualizer')
     parser.add_argument('--input', '-i', type=str, required=True, help='Input image path')
-    exclusive_group = parser.add_mutually_exclusive_group(required=True)
-    exclusive_group.add_argument('--show', '-s', action='store_true', help='Display a figure')
-    exclusive_group.add_argument('--output', '-o', type=str, help='Output figure path')
+    parser.add_argument('--output', '-o', type=str, required=False, help='Output figure path')
     return parser.parse_args()
 
 
@@ -49,17 +47,15 @@ def main(args):
     cs = ['#' + hex((rgb[0] << 16) + (rgb[1] << 8) + rgb[2])[2:].zfill(6) for rgb in rgbs]
 
     fig = plt.figure(figsize=[19.2, 10.8], dpi=96.0)
-    plt.rcParams['axes.facecolor'] = 'none'
 
     ax = fig.add_subplot(projection='3d')
     ax.set_xlabel('Red')
     ax.set_ylabel('Green')
     ax.set_zlabel('Blue')
-
     ax.scatter(rs, gs, bs, c=cs, s=ss, marker='.', depthshade=False)
 
     output = pathlib.Path(args.output).resolve() if args.output is not None else None
-    if output is None or output.exists() or args.show:
+    if output is None or output.exists():
         plt.show()
     else:
         plt.savefig(str(output))
