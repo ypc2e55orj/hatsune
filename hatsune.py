@@ -33,18 +33,18 @@ def main(args):
     # truncate alpha channel
     hatsune_one_dim = hatsune_one_dim[:, 0:3]
 
-    hatsune_pd = pd.DataFrame(hatsune_one_dim, columns=['Red', 'Green', 'Blue'])
+    hatsune_df = pd.DataFrame(hatsune_one_dim, columns=['Red', 'Green', 'Blue'])
     # count duplicate rows(pixels) and sort in descending order
-    hatsune_pd = hatsune_pd.pivot_table(columns=['Red', 'Green', 'Blue'], aggfunc=np.size).reset_index(name='Size').sort_values('Size', ascending=False)
+    hatsune_df = hatsune_df.pivot_table(columns=['Red', 'Green', 'Blue'], aggfunc=np.size).reset_index(name='Size').sort_values('Size', ascending=False)
 
     # DataFrame to ndarray
-    rgbs = hatsune_pd[['Red', 'Green', 'Blue']].to_numpy(dtype=np.uint8)
-    ss = hatsune_pd['Size'].to_numpy(dtype=np.uint32)
+    rgbs = hatsune_df[['Red', 'Green', 'Blue']].to_numpy(dtype=np.uint8)
+    ss = hatsune_df['Size'].to_numpy(dtype=np.uint32)
     rs = rgbs[:, 0]
     gs = rgbs[:, 1]
     bs = rgbs[:, 2]
     # rgb list to html hex str, [2:] is removing '0x'
-    cs = ['#' + hex((rgb[0] << 16) + (rgb[1] << 8) + rgb[2])[2:].zfill(6) for rgb in rgbs]
+    cs = ['#' + hex((r << 16) + (g << 8) + b)[2:].zfill(6) for r, g, b in rgbs]
 
     fig = plt.figure(figsize=[19.2, 10.8], dpi=96.0)
 
