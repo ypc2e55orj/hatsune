@@ -43,7 +43,7 @@ def main(args):
     rs = rgbs[:, 0]
     gs = rgbs[:, 1]
     bs = rgbs[:, 2]
-    # rgb list to html hex str, [2:] is removing '0x'
+    # rgb list to html hex str list
     cs = [f'#{(r << 16) + (g << 8) + b:06x}' for r, g, b in rgbs]
 
     fig = plt.figure(figsize=[19.2, 10.8], dpi=96.0)
