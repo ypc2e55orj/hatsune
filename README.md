@@ -1,10 +1,10 @@
 # hatsune
 
-初音ミクの色成分をmatplotlibで可視化します。
+初音ミクの色成分を [matplotlib](https://matplotlib.org) で可視化します。
 
 もちろん、初音ミク以外の画像にも使用することが可能です。
 
-[このツイート](https://twitter.com/95d2d3/status/1507072893477277696) とインターネットお友達に触発されました。
+[このツイート](https://twitter.com/95d2d3/status/1507072893477277696)と[インターネットお友達](https://twitter.com/2eep2lue/status/1507647686052237313)に[触発](https://twitter.com/2eep2lue/status/1507651659199000576)されました。
 
 <div><video controls src="https://user-images.githubusercontent.com/43885603/160516984-bab60709-2438-4b44-9a4a-0ba614207949.mp4"></video></div>
 
@@ -17,14 +17,16 @@ pipenv install
 
 pipenv shell
 
-# matplotlibのビューワが起動します。
+# matplotlib のビューワが起動します。
 python ./hatsune.py -i input_image_path
 
-# 画像として保存します。
+# plot を画像として保存します。
 python ./hatsune.py -i input_image_path -o output_image_path
 ```
 
-入力する画像ファイルはアルファチャンネル付きpngが望ましいです。また、使用されている色が多いとmatplotlibのビューワの動作が重くなります。
+入力する画像ファイルはアルファチャンネル付き png が望ましいです。
+
+また、使用されている色が多いと matplotlib のビューワの動作が重くなります。
 
 ## Acknowledgment
 
