@@ -44,7 +44,7 @@ def main(args):
     gs = rgbs[:, 1]
     bs = rgbs[:, 2]
     # rgb list to html hex str list
-    cs = [f'#{(r << 16) + (g << 8) + b:06x}' for r, g, b in rgbs]
+    cs = [f'#{(r << 16) | (g << 8) | b:06x}' for r, g, b in rgbs]
 
     fig = plt.figure(figsize=[19.2, 10.8], dpi=96.0)
 
