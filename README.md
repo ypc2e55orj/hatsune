@@ -4,7 +4,7 @@
 
 もちろん、初音ミク以外の画像にも使用することが可能です。
 
-[このツイート](https://twitter.com/95d2d3/status/1507072893477277696)と[インターネットお友達](https://twitter.com/2eep2lue/status/1507647686052237313)に[触発](https://twitter.com/2eep2lue/status/1507651659199000576)されました。
+あるツイートと[インターネットお友達](https://twitter.com/2eep2lue/status/1507647686052237313)に[触発](https://twitter.com/2eep2lue/status/1507651659199000576)されました。
 
 <div><video controls src="https://user-images.githubusercontent.com/43885603/160516984-bab60709-2438-4b44-9a4a-0ba614207949.mp4"></video></div>
 
